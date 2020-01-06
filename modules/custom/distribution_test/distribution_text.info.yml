@@ -1,0 +1,4 @@
+name: 'Distribution test'
+type: module
+description: 'A custom distribution module.'
+core: 8.x
