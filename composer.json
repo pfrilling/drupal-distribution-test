@@ -1,7 +1,7 @@
 {
   "name": "pfrilling/distribution-test",
   "type": "drupal-profile",
-  "description": "Demo distritbution profile.",
+  "description": "Demo distribution profile.",
   "homepage": "https://github.com/pfrilling/drupal-distribution-test/new/master",
   "license": "GPL-2.0+",
   "require": {
@@ -11,7 +11,28 @@
   },
   "require-dev": {},
   "minimum-stability": "dev",
+  "scripts": {
+    "post-install-cmd": [
+      "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+    ],
+    "post-update-cmd": [
+      "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+    ]
+  },
   "extra": {
+    "installer-types": ["bower-asset", "npm-asset"],
+    "installer-paths": {
+      "web/core": ["type:drupal-core"],
+      "web/libraries/{$name}": [
+        "type:drupal-library",
+        "type:bower-asset",
+        "type:npm-asset"
+      ],
+      "web/modules/contrib/{$name}": ["type:drupal-module"],
+      "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+      "web/themes/contrib/{$name}": ["type:drupal-theme"],
+      "drush/contrib/{$name}": ["type:drupal-drush"]
+    },
     "patches": {},
     "preserve-paths": [],
     "drupal-scaffold": {}
