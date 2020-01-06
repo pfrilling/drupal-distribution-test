@@ -6,7 +6,8 @@
   "license": "GPL-2.0+",
   "require": {
     "composer/installers": "~1.0",
-    "drupal/uikit": "3.x-dev"
+    "drupal/uikit": "3.x-dev",
+    "drupal/webform": "^5.6"
   },
   "require-dev": {},
   "minimum-stability": "dev",
