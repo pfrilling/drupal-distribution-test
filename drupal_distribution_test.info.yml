@@ -1,0 +1,4 @@
+name: "Test Profile"
+type: profile
+description: 'Description of this test profile.'
+core: 8.x
