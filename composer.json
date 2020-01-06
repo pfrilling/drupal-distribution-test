@@ -3,16 +3,6 @@
   "type": "drupal-profile",
   "description": "Demo distritbution profile.",
   "homepage": "https://github.com/pfrilling/drupal-distribution-test/new/master",
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    },
-    {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
-    }
-  ],
   "license": "GPL-2.0+",
   "require": {
     "composer/installers": "~1.0",
@@ -21,19 +11,6 @@
   "require-dev": {},
   "minimum-stability": "dev",
   "extra": {
-    "installer-paths": {
-      "./libraries/{$name}": [
-        "type:drupal-library",
-        "type:bower-asset",
-        "type:npm-asset"
-      ],
-      "./modules/contrib/{$name}": [
-        "type:drupal-module"
-      ],
-      "./themes/contrib/{$name}": [
-        "type:drupal-theme"
-      ]
-    },
     "patches": {},
     "preserve-paths": [],
     "drupal-scaffold": {}
